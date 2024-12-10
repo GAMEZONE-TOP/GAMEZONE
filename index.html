@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME ZONE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/head.png" alt="Game Zone Header Image" class="header-image">
+        <div class="topup-section">
+            <a href="https://www.facebook.com/profile.php?id=61553865253811" target="_blank" class="facebook-link" title="Visit us on Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <span class="topup-text">CONTACT</span>
+            <!-- Combined Button with Audio Icon -->
+        <button id="muteButton" class="mute-button" title="Mute/Unmute Audio">
+         <img id="audioIcon" src="img/audio.png" alt="Audio Icon" class="audio-icon">
+            </button>
+
+        </div>
+    </header>
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="img/audio.mp3" type="audio/mpeg">
+      </audio>
+
+    <div class="container">
+        <!-- Notice Board -->
+        <aside class="notice-board">
+            <video class="notice-video" autoplay muted loop>
+                <source src="img/welcome.mp4" type="video/mp4">
+                
+            </video>
+            <h2>CASH TAG</h2>
+            <img src="img/tag.jpg" alt="Notice Board Image" class="notice-image">
+            <h2>CHIME TAG</h2>
+            <img src="img/chime.png" alt="Notice Board Image" class="notice-image">
+            
+
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="gallery">
+                <div class="item">
+                    <a href="https://dl.juwa777.com/" target="_blank">
+                        <img src="img/juwa.png" alt="Image 1">
+                        <p>JUWA</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://download.gamevault999.com/" target="_blank">
+                        <img src="img/gv.png" alt="Image 2">
+                        <p>GAME VAULT</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="http://start.orionstars.vip:8580/index.html" target="_blank">
+                        <img src="img/os.png" alt="Image 3">
+                        <p>ORION STARS</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="http://start.firekirin.xyz:8580/index.html" target="_blank">
+                        <img src="img/fk.png" alt="Image 4">
+                        <p>FIRE KIRIN</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://milkywayapp.xyz/" target="_blank">
+                        <img src="img/mw.png" alt="Image 5">
+                        <p>MILKY WAY</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="http://m.lasvegassweeps.com/" target="_blank">
+                        <img src="img/vs.png" alt="Image 6">
+                        <p>VEGAS SWEEP</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://www.mafia77777.com/" target="_blank">
+                        <img src="img/mafia.png" alt="Image 7">
+                        <p>MAFIA</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://www.gameroom777.com/" target="_blank">
+                        <img src="img/gr.png" alt="Image 8">
+                        <p>GAME ROOM</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://pandamaster.vip:8888/index.html" target="_blank">
+                        <img src="img/pm.png" alt="Image 9">
+                        <p>PANDA MASTER</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://www.cashmachine777.com/" target="_blank">
+                        <img src="img/cm.png" alt="Image 10">
+                        <p>CASH MACHINE</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://www.vblink777.club/" target="_blank">
+                        <img src="img/vb.png" alt="Image 11">
+                        <p>VBLINK</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://www.ultrapanda.mobi/" target="_blank">
+                        <img src="img/up.png" alt="Image 12">
+                        <p>ULTRA PANDA</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const audioIcon = document.getElementById('audioIcon');
+        const muteButton = document.getElementById('muteButton');
+    
+        // Ensure audio plays on page load
+        window.addEventListener('load', () => {
+            backgroundMusic.play().catch(error => {
+                console.log("Autoplay was blocked by the browser:", error);
+            });
+        });
+    
+        // Toggle mute/unmute and update the icon
+        muteButton.addEventListener('click', () => {
+            backgroundMusic.muted = !backgroundMusic.muted;
+    
+            // Update the icon based on the mute status
+            if (backgroundMusic.muted) {
+                audioIcon.src = 'img/off.png'; // Path to your muted icon
+                muteButton.title = 'Unmute Audio';
+            } else {
+                audioIcon.src = 'img/audio.png'; // Path to your unmuted icon
+                muteButton.title = 'Mute Audio';
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
